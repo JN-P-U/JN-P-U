@@ -1,20 +1,8 @@
-***
-
-<h1>React Getting Started</h1>
-
-***
-
-1. 현재 폴더를 npm 프로젝트로 만들기 : 터미널 > npm init -y<br/><br/>
-
-2. 현재 폴더를 루트로 파일서버 만들기(웹서버 형식) : 터미널 > npx serve<br/><br/>
-  
-***
-
 <h1>React Component</h1>
 
 ***
 
-3. React.createElement(타입)<br/>
+1. React.createElement(타입)<br/>
 ```
     React.createElement(
         type, // 태그 이름 문자열 | 리액트 컴포넌트 | React.Fragment
@@ -24,7 +12,7 @@
 ```
 <br/>
 
-4. babel<br/>
+2. babel<br/>
   우리가 작성한 어떤 코드 => 순수하게 실행할 수 있는 자바스크립트<br/>
   위 문장의 => 부분을 해주는 것이 babel<br/>
   JSX 문법으로 작성된 코드는 순수한 JavaScript로 컴퍼일하여 사용한다.<br/>
@@ -54,7 +42,7 @@
   ```
   <br/>
 
-5. JSX의 형태<br/>
+3. JSX의 형태<br/>
   ```
     ReactDOM.render(
       <div a="a">
@@ -71,7 +59,7 @@
   
   <br/>
 
-6. 왜 JSX를 사용하는가?<br/>
+4. 왜 JSX를 사용하는가?<br/>
   React.createElement VS JSX<br/>
   >>>가독성이 JSX의 완승임(위의 사례에서 볼 수 있음)<br/>
 
@@ -79,7 +67,7 @@
   
   <br/>
 
-7. JSX 문법<br/>
+5. JSX 문법<br/>
   >>최상위 요소가 하나여야 함<br/>
   >>>그래서 간혹 보면 어떤 속성도 없이 <></>같은 Fragment를 사용하곤 한다<br/>
 
@@ -107,7 +95,7 @@
   >>>`<p>`어쩌구`</p>`<br/>
   >>>`<br />`<br/>
 
-8. Props와 State<br/>
+6. Props와 State<br/>
   >>Props : 컴포넌트 외부에서 컴포넌트에게 주는 데이터<br/>
   >>State : 컴포넌트 내부에서 변경할 수 있는 데이터. 항상 객체 형태로 사용해야함<br/>
   >>State 생성_1<br/>
@@ -132,12 +120,12 @@
 
   <br/>
 
-9. Render 함수<br/>
+7. Render 함수<br/>
   Props와 State를 바탕으로 컴포넌트를 그림<br/>
   Props와 State가 변경되면, 컴포넌트를 다시 그림<br/>
   즉, 컴포넌트를 그리는 방법을 기술하는 함수<br/><br/>
 
-10. state 값 변경_1<br/>
+8. state 값 변경_1<br/>
   일반적으로 생각하는 방식으로는 값을 변경할 수 없다.<br/>
   8번에서 선언한 state를 예시로 설명<br/>
   잘못된 값 변경 시도 : this.state.count = this.state.count + 1<br/>
@@ -146,7 +134,7 @@
   이는 프론트는 변경사항 생길 시 변경사항을 반영하기 위해서 다시 렌더리를 통해 화면을 표준출력장치(모니터)에 다시 그려줘야 하는데<br/>
   React에서는 state 변경 시 setState 함수를 호출하면 state 값 변경 후 render 함수를 다시 호출하는 것<br/>
 
-11. state 값 변경_2<br/>
+9. state 값 변경_2<br/>
   1번의 값 변경 방식은 state 객체를 새로 만들어서 값을 할당하는 방식이라면<br/>
   다음은 이전 state 객체를 이용하여 값을 변경하는 방식<br/>
   ```
@@ -157,7 +145,7 @@
   ```
   <br/>
 
-12. Event Handling<br/>
+10. Event Handling<br/>
   HTML DOM에 클릭하면 이벤트가 발생하고, 발생하면 그에 맞는 변경이 일어나도록 해야함<br/>
   JSX에 이벤트를 설정할 수 있음<br/>
 
@@ -193,11 +181,11 @@
 ***
 <h2>v16.3 이전의 LifeCycle Hook의 내용</h2>
 
-13. Component Lifecycle<br/>
+11. Component Lifecycle<br/>
   - 리액트 컴포넌트는 탄생부터 죽음까지 여러지점에서 개발자가 작업이 간편하도록 메서드를 오버라이딩 할 수 있게 해준다.</br>
     Devlarative<br/>
 
-![Declarative](./img/Declarative.png)
+![Declarative](../img/Declarative.png)
   - v16.3 이전의 LifeCycle Hook의 내용이지만 알아둬야 현재 버전에 대해서도 이해가 편하다
   - React Component Lifecycle은 Declarative라는 성질을 가짐</br>
     - Initialization ~ Mounting : 처음 그려지는 부분
@@ -219,7 +207,7 @@
       변경이 되어서 render 함수를 다시 호출해야하는지 판단을 한다.(true/false)
     - shouldComponentUpdate를 사용하는 이유는 불필요하게 render되는 것을 방지 함으로써 React Component 성능 최적화에 도움을 줌<br/><br/>
 
-14. Component 생성 및 마운트(v16.3 이전)(Initialization, Mounting )
+12. Component 생성 및 마운트(v16.3 이전)(Initialization, Mounting )
   - 생성 : Component가 객체화 되는 구간
   - 마운트 : 브라우저 어딘가에 그려지는 구간
   - constructor : Component가 생성되는 곳
@@ -227,7 +215,7 @@
   - render(최초 랜더 시점)) : 마운트되는 시점
   - componentDidMount : 마운트 된 직후<br/><br/>
 
-15. Updation
+13. Updation
   - componentWillReceiveProps
     - props를 새로 지정했을 때 바로 호출
     - state의 변경에 반응하지 않음
@@ -252,7 +240,7 @@
   - componentDidUpdate
     - 컴포넌트가 재 랜더린을 마치면 호출<br/><br/>
 
-16. Unmount
+14. Unmount
   - componentWillUnmount
     - 해당 컴포넌트가 사용하고 있던 메모리 중 정리할 것이 있으면 정리
     - API 요청을 이 컴포넌트가 보냈는데 응답을 받기 전 Unmount 된다면 요청 API를 더이상 받을 준비를 하지 않겠다는 작업 처리
@@ -263,7 +251,7 @@
 ***
 <h2>v16.3 이후의 LifeCycle Hook의 내용</h2>
 
-17. 16.3 이후 Component Lifecycle 변경
+15. 16.3 이후 Component Lifecycle 변경
   - Initialization
     - constructor : 동일
 
@@ -305,7 +293,7 @@
       }
       ```
     - componentDidUpdate : 동일
-      - getSnapshotBeforeUpdate에서 구해진 snapshot을 확인할 수 있ㅇ므
+      - getSnapshotBeforeUpdate에서 구해진 snapshot을 확인할 수 있음
       ```
       componentDidUpdate(prevProps, prevState, snapshot) {
         console.log(snapshot);
@@ -319,131 +307,5 @@
   - UnMounting
     - componentWillUnmount : 동일
 
-18. Component 에러 캐치
+16. Component 에러 캐치
   - componentDidCatch<br/><br/>
-
-***
-
-<h1>Creating React App</h1>
-
-1. Create React App
-  - https://create-react-app.dev
-    - Facebook 오픈소스
-    - React 개발에 필요한 것들을 지원해줌
-  
-  - CRA로 react 프로젝트 만들기 : npx create-react-app tic-tac-toe
-    - npx 명령어 : npm5.2.0 이상부터 함께 설치된 커맨드라인 명령어
-    - 최신 라이브러리인지 확인해서 아니면 최신 라이브러리로 업데이트 후 프로젝트 생성해주는 명령어
-    
-  - 아래 메세지 발생함
-    ```
-    You are running `create-react-app` 4.0.3, which is behind the latest release (5.0.1).
-
-    We no longer support global installation of Create React App.
-
-    Please remove any global installs with one of the following commands:
-    - npm uninstall -g create-react-app
-    - yarn global remove create-react-app
-
-    The latest instructions for creating a new app can be found here:
-    https://create-react-app.dev/docs/getting-started/
-
-    ```
-  - 메세지에서 제시하는 명령어 입력해도 안됨
-    - npm uninstall -g create-react-app 
-    - yarn global remove create-react-app
-  - 내 경우 설치되어있는 npm 버전이 7.10.0이고 node 버전이 v16.0.0 인데도 저 오류가 발생함
-  - 해결 : create-react-app 뒤에 @latest를 붙여야 함
-    - npx create-react-app@latest tic-tac-toe 
-
-2. create-react-app
-  - create-react-app으로 만든 프로젝트는 node.js 기반의 프로젝트임
-  - node 프로젝트이므로 package.json 파일 존재
-  - package.json
-    ```
-    {
-      "name": "tic-tac-toe",
-      "version": "0.1.0",
-      "private": true,
-      "dependencies": {
-        "@testing-library/jest-dom": "^5.16.4",
-        "@testing-library/react": "^13.1.1",
-        "@testing-library/user-event": "^13.5.0",
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0",
-        "react-scripts": "5.0.1",
-        "web-vitals": "^2.1.4"
-      },
-      "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-      },
-      "eslintConfig": {
-        "extends": [
-          "react-app",
-          "react-app/jest"
-        ]
-      },
-      "browserslist": {
-        "production": [
-          ">0.2%",
-          "not dead",
-          "not op_mini all"
-        ],
-        "development": [
-          "last 1 chrome version",
-          "last 1 firefox version",
-          "last 1 safari version"
-        ]
-      }
-    }
-
-    ```
-
-3. 주요 라이브러리
-  - dependencies
-  ```
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.1.1",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  ```
-  - 기본 라이브러리
-    - "react": "^18.1.0",
-    - "react-dom": "^18.1.0",
-    - "react-scripts": "5.0.1",
-      - 프로젝트가 개발환경으로 실행하거나, 프로덕션 모드에서 배포를 위한 빌드작업을 하는 create-react-app의 관리역할 라이브러리
-      - 명기된 버전(5.0.1)이 create-react-app의 버전과 동일
-
-  - 테스팅 라이브러리 : @testing-library
-    - "@testing-library/jest-dom": "^5.16.4",
-    - "@testing-library/react": "^13.1.1",
-    - "@testing-library/user-event": "^13.5.0",
-  
-  - "web-vitals": "^2.1.4"
-    - 구글에서 사이트 경험을 측정하고 개선할 수 있도록 정보를 얻어내는 라이브러리
-
-  <br/>
-
-  - scripts
-  ```
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  ```
-    - create-react-app에서 사용 가능한 명령어
-      - start : npm start
-      - build : npm run build
-      - test : npm run test
-      - eject : npm run eject
-    - 각 명령어는 dependencies의 react-scripts의 start, build, test, eject를 실행함
