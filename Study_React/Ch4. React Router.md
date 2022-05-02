@@ -416,19 +416,8 @@ export default function NotFound() {
 <br/><br/>
 
 6. Redirect
+
 - V6에서는 위에서 살펴본 withRouter와 함께 Redirect 컴포넌트도 사라짐
 - 마찬가지로 useNavigate()를 이용하여 처리하면 됨
 
 <br/><br/>
-
-<center>빌드 파일구조</center>
-
-![buildFileTree](../img/buildFileTree.png)
-
-```
-
-```
-
-```
-
-```
