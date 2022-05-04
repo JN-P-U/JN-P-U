@@ -591,10 +591,9 @@
       setValue(e.target.value);
     }
   }
-
   ```
 
-<br/><br/>
+<br/>
 
 4. 컴포넌트간 통신
 
@@ -719,10 +718,9 @@
       setValue('A의 값을 변경');
     }
   }
-
   ```
 
-<br/><br/>
+<br/>
 
 5. Context API
 
