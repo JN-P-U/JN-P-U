@@ -11,7 +11,3 @@
 2. React.createPortal
 
 3. React.forwardRef
-
-<center>방식별 결과1</center>
-
-![useEffect_Result1](../img/useEffect_Result1.png)
